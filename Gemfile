@@ -5,6 +5,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# 2018.01.25 excavator
+# 회원인증 및 권한설정을 위한 gem
+
+# 회원가입 및 인증
+gem 'devise'
+# role 관리
+gem 'rolify'
+# 권한설정
+gem 'authority'
+
+gem 'figaro'
+gem 'fcm'
+gem 'rails_db'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
