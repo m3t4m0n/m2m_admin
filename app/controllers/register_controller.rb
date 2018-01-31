@@ -16,6 +16,7 @@ class RegisterController < ApplicationController
     @info.save
 
     @status = "ok"
+    render json: @status
 
   end
 
