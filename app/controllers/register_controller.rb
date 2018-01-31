@@ -11,12 +11,11 @@ class RegisterController < ApplicationController
     @info.gender = data_JSON['gender']
     @info.type = data_JSON['type']
     @info.phone = data_JSON['phone']
-    @info.token = data_JSON['token']
+    # @info.token = data_JSON['token']
 
     @info.save
 
-    @status = "ok"
-    render json: @status
+    render json: @info
 
   end
 
