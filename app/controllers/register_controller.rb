@@ -14,6 +14,8 @@ class RegisterController < ApplicationController
 
     @info.save
 
+    @status = "ok"
+    
   end
 
 end

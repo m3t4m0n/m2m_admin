@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserAppTest < ActiveSupport::TestCase
+class MobileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

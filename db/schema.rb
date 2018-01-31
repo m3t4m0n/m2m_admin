@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129104511) do
+ActiveRecord::Schema.define(version: 20180129104124) do
 
-  create_table "user_apps", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "phone", null: false
-    t.string "password", null: false
-    t.string "gender", default: "", null: false
-    t.string "type", default: ""
-    t.string "token", null: false
+  create_table "fcms", force: :cascade do |t|
+    t.string "token", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,10 +31,6 @@ ActiveRecord::Schema.define(version: 20180129104511) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "app_user_id"
-    t.string "name"
-    t.string "gender"
-    t.string "type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
