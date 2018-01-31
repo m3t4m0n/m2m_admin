@@ -1,7 +1,7 @@
 class RegisterController < ApplicationController
 
   def index
-    @info = User_apps.new
+    @info = Mobile.new
     info_item = request.raw_post
     data_JSON = JSON.parse(info_item)
 
@@ -15,7 +15,7 @@ class RegisterController < ApplicationController
     @info.save
 
     @status = "ok"
-    
+
   end
 
 end
