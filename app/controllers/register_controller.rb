@@ -1,4 +1,5 @@
 class RegisterController < ApplicationController
+  layout "empty_layout"
 
   def index
     @info = Mobile.new
