@@ -15,7 +15,8 @@ class RegisterController < ApplicationController
 
     @info.save
 
-    render json: @info
+    @status = "disavailable"
+    render json: @status
 
   end
 
