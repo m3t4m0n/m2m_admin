@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/car_call/status'
 
   post '/register/index'
+  get '/register/index'
 
 end
