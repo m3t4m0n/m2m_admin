@@ -3,24 +3,28 @@ class CarCallController < ApplicationController
 
   def status
       @status = "disavailable"
+      render json: @status
+
+      redirect_to '/car_call/pushMessage'
   end
-  
+
   def pushMessage
     fcm = FCM.new(ENV['fcm_secret_key'])
-    
-    registration_ids = params[:token]
-    
+
+    # registration_ids = params[:token]
+
+    registration_ids = 'd__WsdU-YwQ:APA91bErWoFcTNz-XJIV_hreUh6qzzYg2Lffp0btonz_xt7tN-FX-o1lnVo-bvcehfCDcVMGqHJBREyMYPKlDVSATaxGfrbpLAw8CVa69Wyk1AqgbF82E0IOQ_65_Xtwh3IByFvBkKzN'
+
     options = {
-      priority: "high",
       collapse_key: "push_test",
       notification: {
         title: "Message Title",
         body: "Hi, Worked perfectly"
       }
     }
-    
+
     response = fcm.send(registration_ids, options)
-    
+
   end
-  
+
 end
