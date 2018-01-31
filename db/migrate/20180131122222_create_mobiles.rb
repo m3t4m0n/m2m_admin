@@ -8,7 +8,7 @@ class CreateMobiles < ActiveRecord::Migration[5.1]
       t.string :gender, null: false, default: ""
       t.string :type, null: true, default: ""
 
-      t.string :token, null: false
+      # t.string :token, null: false
 
       t.timestamps
     end
