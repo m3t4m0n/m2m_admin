@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post '/register/index'
   get '/register/index'
 
+  post '/car_call/pushMessage'
+
 end
