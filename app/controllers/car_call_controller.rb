@@ -4,8 +4,6 @@ class CarCallController < ApplicationController
   def status
       @status = "disavailable"
       render json: @status
-
-      redirect_to '/car_call/pushMessage'
   end
 
   def pushMessage
