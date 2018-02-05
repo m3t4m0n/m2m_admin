@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/signup'
+
+  get 'user/signin'
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -6,9 +10,12 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get '/car_call/status'
+  post '/car_call/status'
 
   post '/register/index'
-  get '/register/index'
+
+  post '/user/signup'
+  post '/user/signin'
 
   post '/car_call/pushMessage'
 
