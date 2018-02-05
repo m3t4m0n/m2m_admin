@@ -9,7 +9,7 @@ class UserController < ApplicationController
     @signup.gender = data_JSON['gender']
     @signup.type = data_JSON['type']
     @signup.phone = data_JSON['phone']
-    # @info.token = data_JSON['token']
+    @info.token = data_JSON['token']
 
     @signup.save
 
