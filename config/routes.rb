@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   post '/user/signup'
   post '/user/signin'
 
+  get '/car_call/pushMessage'
   post '/car_call/pushMessage'
 
 end
