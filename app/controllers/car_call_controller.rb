@@ -23,7 +23,10 @@ class CarCallController < ApplicationController
 
     # response = fcm.send(registration_ids, options)
     
-    response = fcm.send_to_topic("car_call", data: { message: "This is a FCM car_call Message!" })
+    # response = fcm.send_to_topic("car_call", data: { message: "This is a FCM car_call Message!" })
+    
+    response = fcm.send_with_notification_key("/topics/car_call", 
+                  data: { message: "이거슨 car_call 메시지!" })
                 
     @flag = true
     render json: @flag
