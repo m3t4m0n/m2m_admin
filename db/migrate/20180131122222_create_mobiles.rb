@@ -6,7 +6,7 @@ class CreateMobiles < ActiveRecord::Migration[5.1]
       t.string :password, null:false
 
       t.string :gender, null: false, default: ""
-      t.string :type, null: true, default: ""
+      t.string :role_type, null: true, default: ""
 
       t.string :token, null: false
 

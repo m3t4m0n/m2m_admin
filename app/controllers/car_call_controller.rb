@@ -1,4 +1,5 @@
 require 'fcm'
+
 class CarCallController < ApplicationController
   layout "empty_layout"
 
