@@ -44,4 +44,9 @@ class UserController < ApplicationController
       
   end
   
+  def getInfo_get
+    user_info = Mobile.where("name = :name", :name => "test")
+    render json: user_info
+  end
+  
 end
