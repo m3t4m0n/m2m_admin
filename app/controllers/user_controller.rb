@@ -30,7 +30,7 @@ class UserController < ApplicationController
       check_flag = false
     end
 
-    render json: @check_flag
+    render json: check_flag
 
   end
 end
