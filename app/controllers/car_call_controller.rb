@@ -28,8 +28,8 @@ class CarCallController < ApplicationController
     response = fcm.send_with_notification_key("/topics/car_call", 
                   data: { message: "이거슨 car_call 메시지!" })
                 
-    @flag = true
-    render json: @flag
+    @flag = response
+    render json: response
 
   end
 
