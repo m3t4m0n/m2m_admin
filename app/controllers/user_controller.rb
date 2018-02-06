@@ -23,7 +23,7 @@ class UserController < ApplicationController
     data_JSON = JSON.parse(signin_item)
 
     check_flag = false
-    user_info = Mobile.where("name = :name", :name => data_JSON['name']
+    user_info = Mobile.where("name = :name", :name => data_JSON['name'])
     if(user_info[0].password == data_JSON['password'])
       check_flag = true
     else
