@@ -9,11 +9,11 @@ class UserController < ApplicationController
     @signup.gender = data_JSON['gender']
     @signup.role_type = data_JSON['type']
     @signup.phone = data_JSON['phone']
-    @info.token = data_JSON['token']
+    @signup.token = data_JSON['token']
 
     @signup.save
 
-    @status = signup_item
+    @status = "complete"
     render json: @status
 
   end
