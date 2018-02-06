@@ -18,8 +18,13 @@
     <!-- Header -->
     <%= render '/partials/header' %>
     
-    <!-- Body -->
-    <%= yield %>
+    <section id="main">
+        <!-- Body -->
+        <%= yield %>
+    </section>
+    
+    <!-- Pageloader -->
+    <%= render '/partials/pageloader' %>
     
     <%= javascript_include_tag 'application' %>
   </body>
