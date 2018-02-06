@@ -13,7 +13,7 @@ class UserController < ApplicationController
 
     @signup.save
 
-    @status = "complete"
+    @status = signup_item
     render json: @status
 
   end
