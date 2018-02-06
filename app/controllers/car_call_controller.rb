@@ -26,8 +26,8 @@ class CarCallController < ApplicationController
     
     response = fcm.send_to_topic("car_call", data: { message: "This is a FCM car_call Message!" })
                 
-    @flag = response
-    render json: response
+    @flag = fcm
+    render json: fcm
 
   end
 
