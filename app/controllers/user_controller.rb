@@ -22,13 +22,12 @@ class UserController < ApplicationController
     signin_item = request.raw_post
     data_JSON = JSON.parse(signin_item)
 
-    @signin_name = Mobile.exists?(["name like ?", "#{data_JSON['name']}"])
-    @signin_password = Mobile.exists?(["password like ?", "#{data_JSON['password']}"])
-
-    if @signin_name && @signin_password
-      @check_flag = true
+    check_flag = false
+    user_info = Mobile.where("name = :name", :name => data_JSON['name']
+    if(user_info[0].password == data_JSON['password'])
+      check_flag = true
     else
-      @check_flag = false
+      check_flag = false
     end
 
     render json: @check_flag
