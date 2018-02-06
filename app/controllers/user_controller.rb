@@ -33,4 +33,15 @@ class UserController < ApplicationController
     render json: check_flag
 
   end
+  
+  def getInfo
+      user_id = request.raw_post
+      data_JSON = JSON.parse(user_id)
+      
+      user_info = Mobile.where("name = :name", :name => data_JSON['name'])
+      
+      render json: user_info
+      
+  end
+  
 end
