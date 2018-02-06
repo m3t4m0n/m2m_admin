@@ -7,7 +7,7 @@ class UserController < ApplicationController
     @signup.name = data_JSON['name']
     @signup.password = data_JSON['password']
     @signup.gender = data_JSON['gender']
-    @signup.type = data_JSON['type']
+    @signup.role_type = data_JSON['type']
     @signup.phone = data_JSON['phone']
     @info.token = data_JSON['token']
 
