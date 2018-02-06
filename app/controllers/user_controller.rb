@@ -40,7 +40,7 @@ class UserController < ApplicationController
       
       user_info = Mobile.where("name = :name", :name => data_JSON['name'])
       
-      render json: user_info
+      render json: user_info[0]
       
   end
   
