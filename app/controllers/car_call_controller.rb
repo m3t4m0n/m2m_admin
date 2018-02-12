@@ -31,5 +31,16 @@ class CarCallController < ApplicationController
     render json: response
 
   end
+  
+  def carReservRequest
+    request_item = request.raw_post
+    data_JSON = JSON.parse(request_item)
+    
+    request_info = Mobile.where("name = :name", :name => data_JSON['name'])
+    
+    
+    
+    
+  end
 
 end

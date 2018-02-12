@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129104124) do
+ActiveRecord::Schema.define(version: 20180212124420) do
+
+  create_table "carreservrequests", force: :cascade do |t|
+    t.string "location"
+    t.string "date"
+    t.string "time"
+    t.string "memo"
+    t.string "wheel"
+    t.string "friend"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "mobile_id"
+    t.index ["mobile_id"], name: "index_carreservrequests_on_mobile_id"
+  end
 
   create_table "fcms", force: :cascade do |t|
     t.string "token", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mobiles", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "phone", null: false
+    t.string "password", null: false
+    t.string "gender", default: "", null: false
+    t.string "role_type", default: ""
+    t.string "token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
